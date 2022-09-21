@@ -11,7 +11,8 @@ Injured character tiles screenshots from:
 https://www.neoseeker.com/forums/26308/t2304745-continue/
 
 Boxing glove cursor:
-https://www.pngegg.com/en/png-iihbe
+https://www.pngegg.com/en/png-zqokd
+
 
 ## Sounds:
 
