@@ -18,3 +18,13 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+#score {
+    font-size: 4em;
+}
+
+#whackboard {
+    display: grid;
+    height: 50%;
+    width: 80%;
+}
