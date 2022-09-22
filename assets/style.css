@@ -50,4 +50,10 @@ body {
     left: 100px;
     background-image: url(/assets/images/cursor/BGcursor.png);
     background-size: 100% 100%;
+    transform: translate(-50%, -20%);
+    transition: transform .1s;
+}
+
+.cursor.active {
+    transform: translate(-50%, -20%) rotate(90deg);
 }
