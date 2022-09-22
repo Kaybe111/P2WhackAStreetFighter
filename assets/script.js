@@ -23,3 +23,4 @@ window.addEventListener('mousedown', function() {
  window.addEventListener('mouseup', function() {
     cursor.style.transform = 'translate(-50%, -20%)';
 })
+
