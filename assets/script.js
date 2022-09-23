@@ -13,7 +13,7 @@ window.addEventListener('mousemove', function (event) {
  * to simulate giving a punch
  */
 window.addEventListener('mousedown', function () {
-    cursor.style.transform = 'translate(-50%, -20%) rotate(70deg)';
+    cursor.style.transform = 'translate(-50%, -20%) rotate(0deg)';
 })
 
 /**
@@ -21,7 +21,7 @@ window.addEventListener('mousedown', function () {
  * rest state
  */
 window.addEventListener('mouseup', function () {
-    cursor.style.transform = 'translate(-50%, -20%)';
+    cursor.style.transform = 'translate(-50%, -20%) rotate(90deg)';
 })
 
 /**
@@ -57,8 +57,43 @@ popup.addEventListener('click', function(){
     score.textContent = points;
 })
 
+/**
+ * Removes the character tile from the hole
+ * after 3000 milliseconds
+ */
 let timer;
 timer = setTimeout(function(){
     popup.classList.add('hide');
-}, 1500)
+}, 3000)
 
+/**
+ * This changes the character tile to an injured version
+ * from the original SF2 continue screen when you whack them
+ */
+popup.addEventListener('click', function() {
+    ryu = document.getElementById('ryuPic');
+    ken = document.getElementById('kenPic');
+    chunli = document.getElementById('chunliPic');
+    guile = document.getElementById('guilePic');
+    blanka = document.getElementById('blankaPic');
+    zangief = document.getElementById('zangiefPic');
+    dhalsim = document.getElementById('dhalsimPic');
+    honda = document.getElementById('hondaPic');
+    balrog = document.getElementById('balrogPic');
+    vega = document.getElementById('vegaPic');
+    sagat = document.getElementById('sagatPic');
+    bison = document.getElementById('bisonPic');
+
+    ryu.src = "/assets/images/injuredFighters/ryuInjured.png"
+    ken.src = "/assets/images/injuredFighters/kenInjured.png"
+    chunli.src = "/assets/images/injuredFighters/chunliInjured.png"
+    guile.src = "/assets/images/injuredFighters/guileInjured.png"
+    blanka.src = "/assets/images/injuredFighters/blankaInjured.png"
+    zangief.src = "/assets/images/injuredFighters/zangiefInjured.png"
+    dhalsim.src = "/assets/images/injuredFighters/dhalsimInjured.png"
+    honda.src = "/assets/images/injuredFighters/hondaInjured.png"
+    balrog.src = "/assets/images/injuredFighters/balrogInjured.png"
+    vega.src = "/assets/images/injuredFighters/vegaInjured.png"
+    sagat.src = "/assets/images/injuredFighters/sagatInjured.png"
+    bison.src = "/assets/images/injuredFighters/bisonInjured.png"
+})
