@@ -36,3 +36,11 @@ popup.classList.remove('hide');
 popup.addEventListener('click', function() {
     alert('You whacked me')
 })
+
+let score = document.getElementsByTagName('span')[0];
+let points = Number(0);
+console.log(score.textContent);
+popup.addEventListener('click', function(){
+    points += Number(10);
+    score.textContent = points;
+})
