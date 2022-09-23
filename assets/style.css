@@ -37,6 +37,7 @@ body {
     background-size: 100% 100%;
     transform: translate(-50%, -20%);
     transition: transform .1s;
+    pointer-events: none;
 }
 
 #whackboard {

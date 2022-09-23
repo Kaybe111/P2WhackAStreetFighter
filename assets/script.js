@@ -24,15 +24,15 @@ window.addEventListener('mouseup', function () {
     cursor.style.transform = 'translate(-50%, -20%)';
 })
 
-    let tiles = document.getElementsByClassName('tile');
+let tiles = document.getElementsByClassName('tile');
 console.log(tiles.length);
 console.log(tiles);
-    let i = Math.floor(Math.random() * tiles.length);
+let i = Math.floor(Math.random() * tiles.length);
 console.log(i);
-    let popup = tiles[i];
+let popup = tiles[i];
 console.log(popup.innerHTML);
-    popup.classList.remove('hide');
+popup.classList.remove('hide');
 
-   
-    })
-
+popup.addEventListener('click', function() {
+    alert('You whacked me')
+})
