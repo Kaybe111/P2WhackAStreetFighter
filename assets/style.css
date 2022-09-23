@@ -72,3 +72,7 @@ body {
         transform: translateX(-40%) translateY(0%);
     }
 }
+
+.hole .hide {
+    display: none;
+}
