@@ -29,8 +29,6 @@ window.addEventListener('mouseup', function () {
  */
 function letsFight() {
 
-    
-
 /**
  * This function makes the character tiles pop up
  * from random holes
@@ -45,7 +43,7 @@ console.log(popup.innerHTML);
 popup.classList.remove('hide');
 
 /**
- * This function defines what should happen when the cursor
+ * This following defines what should happen when the cursor
  * is clicked on a character tile when it popsup
  */
 
@@ -80,9 +78,12 @@ console.log(score.textContent);
 popup.addEventListener('click', function () {
     points += Number(10);
     score.textContent = points;
-    clearTimeout(timer)
+    clearTimeout(timer);
+    setTimeout(function () {
+        popup.classList.add('hide');
+        letsFight();
+    }, 500)
 })
-
 
 
 /**
