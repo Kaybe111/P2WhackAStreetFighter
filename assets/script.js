@@ -25,6 +25,13 @@ window.addEventListener('mouseup', function () {
 })
 
 /**
+ * This starts the game
+ */
+function letsFight() {
+
+    
+
+/**
  * This function makes the character tiles pop up
  * from random holes
  */
@@ -41,9 +48,27 @@ popup.classList.remove('hide');
  * This function defines what should happen when the cursor
  * is clicked on a character tile when it popsup
  */
+
+
+/**
+ * This will create the random punch sound to use on whacking
+ * the character
+ */
 popup.addEventListener('click', function() {
-    alert('You whacked me')
+    let punchSound1 = new Audio('assets/sounds/mixkit-soft-quick-punch-2151.wav');
+    let punchSound2 = new Audio('assets/sounds/mixkit-weak-hit-impact-2148.wav');
+    punchSound2.play();
 })
+
+/**
+ * Removes the character tile from the hole
+ * after 3000 milliseconds
+ */
+ let timer;
+ timer = setTimeout(function () {
+     popup.classList.add('hide');
+     letsFight();
+ }, 3000)
 
 /**
  * This function increments the score by 10 for every successful
@@ -52,25 +77,19 @@ popup.addEventListener('click', function() {
 let score = document.getElementsByTagName('span')[0];
 let points = Number(0);
 console.log(score.textContent);
-popup.addEventListener('click', function(){
+popup.addEventListener('click', function () {
     points += Number(10);
     score.textContent = points;
+    clearTimeout(timer)
 })
 
-/**
- * Removes the character tile from the hole
- * after 3000 milliseconds
- */
-let timer;
-timer = setTimeout(function(){
-    popup.classList.add('hide');
-}, 3000)
+
 
 /**
  * This changes the character tile to an injured version
  * from the original SF2 continue screen when you whack them
  */
-popup.addEventListener('click', function() {
+popup.addEventListener('click', function () {
     ryu = document.getElementById('ryuPic');
     ken = document.getElementById('kenPic');
     chunli = document.getElementById('chunliPic');
@@ -97,3 +116,5 @@ popup.addEventListener('click', function() {
     sagat.src = "/assets/images/injuredFighters/sagatInjured.png"
     bison.src = "/assets/images/injuredFighters/bisonInjured.png"
 })
+}
+letsFight();
